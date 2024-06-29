@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import VehicleDetails
 
-# Register your models here.
+
+class VehicleDetailsAdmin(admin.ModelAdmin):
+    list_display = ['make', 'model', 'year', 'vin_number']
+
+
+admin.site.register(VehicleDetails, VehicleDetailsAdmin)
