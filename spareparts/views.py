@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import VehicleDetails
-from .serializers import VehicleDetailsSerializer
+from .models import Vehicle
+from .serializers import VehicleSerializer
 
 
-class VehicleDetailsViewSet(viewsets.ModelViewSet):
-    queryset = VehicleDetails.objects.all()
-    serializer_class = VehicleDetailsSerializer
+class VehicleViewSet(viewsets.ModelViewSet):
+    queryset = Vehicle.objects.all()
+    serializer_class = VehicleSerializer
 
 
